@@ -1,0 +1,12 @@
+# Dependências do Node
+/node_modules
+/package-lock.json
+
+# Variáveis de Ambiente
+.env
+
+# Logs
+npm-debug.log*
+
+# Conteúdo do arquivo .gitignore
+/node_modules
