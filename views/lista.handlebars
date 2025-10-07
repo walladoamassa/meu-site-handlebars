@@ -1,0 +1,35 @@
+<h1>{{titulo}}</h1>
+
+{{#if temUsuarios}}
+    <h2 style="color: blue;">Dados carregados com sucesso!</h2>
+    
+    <table border="1" style="width: 50%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="padding: 8px;">Nome Completo</th>
+                <th style="padding: 8px;">Idade</th>
+                <th style="padding: 8px;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each usuarios}}
+                <tr>
+                    <td style="padding: 8px;">{{nome}}</td>
+                    <td style="padding: 8px; text-align: center;">{{idade}}</td>
+                    <td style="padding: 8px; text-align: center;">
+                        
+                        {{#if ativo}}
+                            <strong style="color: green;">Ativo</strong>
+                        {{else}}
+                            <strong style="color: red;">Inativo</strong>
+                        {{/if}}
+                        
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    
+{{else}}
+    <p>A rota não retornou nenhum dado. A lista está vazia.</p>
+{{/if}}
